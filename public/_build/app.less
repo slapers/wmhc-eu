@@ -12,3 +12,70 @@ html, body{
 main.wmhc-main {
   padding-top: @navbar-height;
 }
+
+h1 {
+  .wmhc-font-bold();
+  letter-spacing: -1.5px;
+}
+
+h2 {
+  .wmhc-font-bold();
+  letter-spacing: -1px;
+}
+
+h3 {
+  .wmhc-font-light();
+}
+
+h4 {
+  .wmhc-font-extra-light();
+}
+
+h5 {
+  .wmhc-font-black();
+  text-transform: uppercase;
+  letter-spacing: .8px;
+}
+
+h6 {
+  .wmhc-font-bold();
+  text-transform: uppercase;
+  letter-spacing: .3px;
+}
+
+hr {
+  border-top: 2px solid #eee;
+}
+
+.wmhc-body-large{
+  font-size: ceil(@font-size-base * 1.25); // ~ 20px
+  letter-spacing: 0.4px;
+  .wmhc-font-semibold
+}
+
+.wmhc-body-medium{
+  font-size: ceil(@font-size-base * 1.4); // ~ 20px
+}
+
+.wmhc-body-small{
+  font-size: ceil(@font-size-base * 0.875); // ~ 14px
+  letter-spacing: .2px;
+  line-height: 1.7rem;
+}
+
+.wmhc-body-micro{
+  font-size: ceil(@font-size-base * 0.75); // ~ 12px
+}
+
+
+.vdivider:after {
+  background: @gray-lighter;
+  width: 2px;
+  content: "";
+  display:block;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  right: 0;
+  min-height: 70px;
+}

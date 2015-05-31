@@ -17,6 +17,15 @@
 .wmhc-font-bold() {
   font-weight: 700;
 }
+.wmhc-font-black() {
+  font-weight: 900;
+}
+
+@wmhc-blue-sky: #E4F4FF;
+@wmhc-green-grass: #2ECC71;
+
+
+
 
 
 //== Colors
@@ -44,7 +53,7 @@
 //** Background color for `<body>`.
 @body-bg:               #fff;
 //** Global text color on `<body>`.
-@text-color:            @gray-dark;
+@text-color:            #b1b1b1;
 
 //** Global textual link color.
 @link-color:            @brand-primary;
@@ -64,16 +73,16 @@
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
 
-@font-size-base:          14px;
+@font-size-base:          16px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
 @font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
 
-@font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
-@font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
-@font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
-@font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
-@font-size-h5:            @font-size-base;
-@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
+@font-size-h1:            floor((@font-size-base * 3.875));   // ~62px
+@font-size-h2:            floor((@font-size-base * 2.625));     // ~42px
+@font-size-h3:            ceil((@font-size-base * 2.625)); // ~42px
+@font-size-h4:            ceil((@font-size-base * 2.625)); // ~42px
+@font-size-h5:            ceil((@font-size-base * .8125)); // ~13px
+@font-size-h6:            ceil((@font-size-base * 0.6875)); // ~11px
 
 //** Unit-less `line-height` for use in components like buttons.
 @line-height-base:        1.428571429; // 20/14
@@ -84,7 +93,7 @@
 @headings-font-family:    inherit;
 @headings-font-weight:    500;
 @headings-line-height:    1.1;
-@headings-color:          inherit;
+@headings-color:          @gray-dark;
 
 
 //== Iconography
