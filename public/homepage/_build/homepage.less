@@ -1,0 +1,34 @@
+@import "../../_build/_variables";
+
+.wmhc-hero-homepage {
+
+  background-color: @wmhc-blue-sky;
+  border-bottom: 1px solid darken(@wmhc-green-grass, 20%);
+
+  .container {
+    background-image: url('/homepage/assets/website-hero-phone.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    height: 171px;
+  }
+  @media (min-width: @screen-sm-min) {
+    .container {
+      background-image: url('/homepage/assets/website-hero-small.png');
+      height: 285px;
+    }
+  }
+  @media (min-width: @screen-md-min) {
+    .container {
+      background-image: url('/homepage/assets/website-hero-medium.png');
+      height: 428px;
+    }
+    border-bottom-width: 2px;
+  }
+  @media (min-width: @screen-lg-min) {
+    .container {
+      background-image: url('/homepage/assets/website-hero.png');
+      height: 570px;
+    }
+  }
+
+}
