@@ -1,0 +1,62 @@
+@import "../../../_build/_variables";
+
+footer {
+  margin-top: 3rem;
+
+  .footer-main{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: @wmhc-green-grass;
+
+    .container {
+      position: relative;
+    }
+
+    ul.wmhc-nav {
+      list-style: none;
+      a {
+        text-transform: uppercase;
+        .wmhc-font-semibold();
+        font-size: @font-size-base * 1.25;
+        color: #fff;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .logo {
+      display: block;
+      width: 128px;
+      height: 128px;
+      background-size: 100% 100%;
+      background-image: url("/assets/img/wmhc-logo.svg");
+    }
+
+    @media (min-width: @screen-sm-min) {
+      ul.wmhc-nav {
+        margin-top: 3rem;
+        li {
+          margin-bottom: 1rem;
+        }
+      }
+      .logo {
+        width: 340px;
+        height: 340px;
+      }
+    }
+
+  }
+  .footer-sub {
+    padding: 2rem 0px;
+    background-color: darken(@wmhc-green-grass, 20%);
+    color: #fff;
+
+    .disclaimer {
+      display: block;
+      text-align: center;
+      font-size: floor(@font-size-base * .875);
+      text-transform: uppercase;
+    }
+  }
+}

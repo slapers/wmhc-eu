@@ -1,2 +1,22 @@
+mixin nav-link-footer(url, title)
+    li(class="#{ menuActiveItem === url ? 'active' : '' }")
+        a(href="#{url}/")= title
+
 footer
-    | footer
+    .footer-main
+        .container
+            .row
+                .col-xs-6
+                    ul.wmhc-nav
+                        li(class="#{ menuActiveItem === 'index' ? 'active' : '' }")
+                            a(href="/") Club
+                        +nav-link-footer('kalender', 'Kalender')
+                        +nav-link-footer('fotos', 'Fotos')
+                        +nav-link-footer('reglement', 'Reglement')
+                .col-xs-6
+                    span.logo.pull-right
+
+    .footer-sub
+        .container
+            span.disclaimer
+                | WMHC V.Z.W Maatschappelijke zetel: Fortenstraat 95, 9250 WAASMUNSTER
