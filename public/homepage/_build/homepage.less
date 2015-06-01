@@ -30,5 +30,180 @@
       height: 570px;
     }
   }
+}
 
+
+.wmhc-landing-homepage {
+
+  position: relative;
+  background-color: @wmhc-green-grass;
+  color: white;
+  padding-bottom: 3rem;
+
+  .grass {
+    height: 31px;
+    width: 100%;
+    background-image: url('/homepage/assets/grassprietjes-small.png');
+    background-repeat: repeat-x;
+    position: absolute;
+  }
+
+  h2, p {
+    text-align: center;
+    color: white;
+    font-size: floor(@font-size-base * 1.8);
+
+    &.smaller {
+      font-size: floor(@font-size-base * 1.2);
+      color: darken(@wmhc-green-grass, 20%);
+      .wmhc-font-normal();
+    }
+  }
+  .content {
+    margin-top: 2rem;
+  }
+
+  .entries {
+    padding-top: 2rem;
+  }
+
+  .entry {
+    text-align: center;
+    font-size: floor(@font-size-base*1.3);
+    margin-bottom: 1rem;
+    .time {
+      padding-left: 20px;
+    }
+  }
+
+
+  @media (min-width: @screen-sm-min) {
+
+    .landing {
+      width: 395px;
+      height: 230px;
+      position: absolute;
+      background-image: url('/homepage/assets/H-zone-medium.png');
+      background-repeat: no-repeat;
+      bottom: 0;
+    }
+    h2, .entry {
+      float: right;
+    }
+  }
+
+  @media (min-width: @screen-md-min) {
+
+    h2 {
+      font-size: @font-size-h2;
+      float: right;
+      &.smaller {
+        font-size: floor(@font-size-base * 1.8);
+      }
+    }
+    .grass {
+      background-image: url('/homepage/assets/grassprietjes.png');
+      height: 62px;
+    }
+    .landing {
+      width: 395px;
+      height: 284px;
+      background-image: url('/homepage/assets/H-zone-medium.png');
+    }
+    .content {
+      margin-top: 62px;
+    }
+
+    .entry {
+      font-size: floor(@font-size-base*1.5);
+    }
+  }
+
+  @media (min-width: @screen-lg-min) {
+
+    padding-bottom: 5rem;
+
+    .landing {
+      width: 527px;
+      height: 378px;
+      background-image: url('/homepage/assets/H-zone.png');
+    }
+
+    .entries {
+      padding-top: 4rem;
+    }
+
+    .entry {
+      font-size: floor(@font-size-h3 * .8);
+      margin-bottom: 1rem;
+      .time {
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+.wmhc-club-info{
+  background-color: @gray-lighter;
+  border-top: 10px solid lighten(@gray-light, 40%);
+}
+
+
+.wmhc-motoren {
+  padding: 4rem 0;
+  background-color: @gray-lighter;
+
+  .img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .vdivider:after {
+    background-color: lighten(@gray-light, 40%);
+  }
+  .img.benzine-motor {
+    position: relative;
+    right: 25px;
+    width: 218px;
+    height: 168px;
+    background-image: url('/homepage/assets/benzine_motor-small.png');
+  }
+  .img.electro-motor {
+    position: relative;
+    left: 25px;
+    width: 156px;
+    height: 169px;
+    background-image: url('/homepage/assets/electric_motor-small.png');
+  }
+  .row {
+    margin-top: 2rem;
+  }
+
+  h5 {
+    margin-top: 5rem;
+  }
+
+  h5, p {
+    text-align: center;
+  }
+
+  p {
+    padding: 0 5rem;
+  }
+}
+
+
+.wmhc-divider {
+  background-color: @gray-lighter;
+}
+
+
+.bestuurslid {
+  margin-top: 8rem;
+  .name {
+    .wmhc-font-semibold();
+    font-size: floor(@font-size-base * 1.5);
+  }
+  .email:after{
+    content: '';
+  }
 }
