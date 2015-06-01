@@ -4,7 +4,7 @@ block main
 
     .container.wmhc-reglementen.padding-top-xl
 
-        h3.padding-bottom-xl Clubreglementen
+        h3.padding-bottom-xl.text-center Clubreglementen
 
         .panel.panel-default
             .panel-heading
@@ -140,7 +140,7 @@ block main
                         span 5.08
                         | Het lidgeld wordt gedurende het seizoen als volgt bepaald:
 
-                        table.table.table-hover
+                        table.table.table-hover.pricing
                             thead
                                 tr
                                     th  Periode
@@ -291,14 +291,15 @@ block main
                         | Men moet voldoen aan de vigerende wetgeving
 
 
-        h5 Opgemaakt te Waasmunster op 19 november 2013
+        .row
+            h5.padding-top-xl.padding-bottom-l.text-center Opgemaakt te Waasmunster op 19 november 2013
 
-        table.bestuur
-            tr
-                td Thierry Verbrugge
-                td Freddy Van Overloop
-            tr
-                td
-                    small Voorzitter
-                td
-                    small Secretaris
+        .row.padding-top-xl.padding-bottom-xl
+
+            .col-xs-6.vdivider.padding-right-xxl
+                h4.naam.text-right Thierry Verbrugge
+                h6.text-right Voorzitter
+
+            .col-xs-6.padding-left-xxl
+                h4.naam Freddy Van Overloop
+                h6 Secretaris
