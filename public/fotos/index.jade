@@ -1,0 +1,16 @@
+extends ../_layouts/default
+
+block main
+
+    section.photo-albums(ng-controller="PhotoController")
+
+        .container
+
+            .col-md-6.album.ng-cloak(ng-repeat="album in albums", ng-click="openAlbum(album)")
+                figure
+                    .overlay
+                    img.img-responsive(ng-src="{{album.thumbnail}}")
+                    .title {{album.title}}
+                    .summary {{album.summary}}
+                    .photos {{album.photos}}
+                    .date(am-time-ago="album.published")

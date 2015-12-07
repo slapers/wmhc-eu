@@ -1,5 +1,5 @@
 (function () {
   angular.module('app', [
-    'duScroll'
+    'angularMoment'
   ]);
 })();

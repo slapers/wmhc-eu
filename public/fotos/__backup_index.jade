@@ -1,0 +1,29 @@
+extends ../_layouts/default
+
+block main
+
+    div(ui-view='content')
+
+    .photobrowser(ng-controller="PhotoController")
+
+        section.photo-albums(ng-hide="showPhotos")
+
+            .container.albums
+
+                .col-md-6.album.ng-cloak(ng-repeat="album in albums", ng-click="displayPhotos(album)")
+                    figure
+                        .overlay
+                        img.img-responsive(ng-src="{{album.thumbnail}}")
+                        .title {{album.title}}
+                        .summary {{album.summary}}
+                        .photos {{album.photos}}
+                        .date(am-time-ago="album.published")
+
+
+        section.photos(ng-show="showPhotos")
+
+            .close(ng-click="hidePhotos()")
+
+            .title {{album.title}}
+
+            img.image(ng-src="{{album.thumbnail}}")

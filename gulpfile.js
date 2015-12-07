@@ -132,36 +132,24 @@ var ngxFiles = {
     },
     {
       src: [
-        path.join(bowerDirectory, '/angular-touch/angular-touch.js'),
-        path.join(bowerDirectory, '/angular-touch/angular-touch.min.js'),
-        path.join(bowerDirectory, '/angular-touch/angular-touch.min.js.map')
+        path.join(bowerDirectory, '/angular-ui-router/release/angular-ui-router.js'),
+        path.join(bowerDirectory, '/angular-ui-router/release/angular-ui-router.min.js')
       ],
-      dest: path.join(outputDirectory, '/vendor/angular-touch/')
+      dest: path.join(outputDirectory, '/vendor/angular-ui-router/')
     },
     {
       src: [
-        path.join(bowerDirectory, '/angular-animate/angular-animate.js'),
-        path.join(bowerDirectory, '/angular-animate/angular-animate.min.js'),
-        path.join(bowerDirectory, '/angular-animate/angular-animate.min.js.map')
+        path.join(bowerDirectory, '/moment/min/moment.min.js')
       ],
-      dest: path.join(outputDirectory, '/vendor/angular-animate/')
+      dest: path.join(outputDirectory, '/vendor/moment/')
     },
     {
       src: [
-        path.join(bowerDirectory, '/angular-scroll/angular-scroll.js'),
-        path.join(bowerDirectory, '/angular-scroll/angular-scroll.min.js'),
-        path.join(bowerDirectory, '/angular-scroll/angular-scroll.min.js.map')
+        path.join(bowerDirectory, '/angular-moment/angular-moment.js'),
+        path.join(bowerDirectory, '/angular-moment/angular-moment.min.js'),
+        path.join(bowerDirectory, '/angular-moment/angular-moment.min.js.map')
       ],
-      dest: path.join(outputDirectory, '/vendor/angular-scroll/')
-    },
-    {
-      src: [
-        path.join(bowerDirectory, '/angular-carousel/dist/angular-carousel.js'),
-        path.join(bowerDirectory, '/angular-carousel/dist/angular-carousel.min.js'),
-        path.join(bowerDirectory, '/angular-carousel/dist/angular-carousel.css'),
-        path.join(bowerDirectory, '/angular-carousel/dist/angular-carousel.min.css')
-      ],
-      dest: path.join(outputDirectory, '/vendor/angular-carousel/')
+      dest: path.join(outputDirectory, '/vendor/angular-moment/')
     }
   ],
 

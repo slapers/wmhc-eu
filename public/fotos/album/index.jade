@@ -1,0 +1,25 @@
+extends ../../_layouts/empty
+
+block main
+
+    section.photos(ng-controller="AlbumController")
+
+        .top
+            .back(ng-click="openFotos()")
+                .icon
+
+
+        .middle
+            .prev
+                .icon(ng-click="previous()")
+
+            .media
+                img.image(ng-src="{{current.url}}")
+            .next
+                .icon(ng-click="next()")
+
+        .footer
+            .nav
+                span.current {{index + 1}}
+                span.divider /
+                span.total {{photos.length}}
