@@ -19,7 +19,8 @@ nav.navbar.navbar-default.navbar-fixed-top.wmhc-navbar-top
         .navbar-collapse.collapse#navbar
             ul.nav.navbar-nav.navbar-right
                 li(class="#{ menuActiveItem === 'index' ? 'active' : '' }")
-                    a(href="/") Club
+                    a(href="/") Home
+                +navbar-top-link('club', 'Club')
                 //-+navbar-top-link('kalender', 'Kalender')
                 +navbar-top-link('fotos', 'Fotos')
                 +navbar-top-link('reglement', 'Reglement')
