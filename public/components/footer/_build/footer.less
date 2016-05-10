@@ -1,12 +1,13 @@
 @import "../../../_build/_variables";
 
 footer {
-  margin-top: 3rem;
+  margin-top: 5rem;
 
   .footer-main{
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    background-color: @wmhc-green-grass;
+    border-top: 10px solid @gray-lighter;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: desaturate(darken(@wmhc-blue-sky, 70%), 70%);
 
     .container {
       position: relative;
@@ -17,7 +18,7 @@ footer {
       a {
         text-transform: uppercase;
         .wmhc-font-semibold();
-        font-size: @font-size-base * 1.25;
+        font-size: @font-size-base * .9;
         color: #fff;
         &:hover {
           text-decoration: none;
@@ -35,21 +36,21 @@ footer {
 
     @media (min-width: @screen-sm-min) {
       ul.wmhc-nav {
-        margin-top: 3rem;
+        margin-top: 1rem;
         li {
           margin-bottom: 1rem;
         }
       }
       .logo {
-        width: 340px;
-        height: 340px;
+        width: 128px;
+        height: 128px;
       }
     }
 
   }
   .footer-sub {
-    padding: 2rem 0px;
-    background-color: darken(@wmhc-green-grass, 20%);
+    padding: 1rem 0px;
+    background-color: desaturate(darken(@wmhc-blue-sky, 80%), 70%);
     color: #fff;
 
     .disclaimer {
@@ -57,6 +58,7 @@ footer {
       text-align: center;
       font-size: floor(@font-size-base * .875);
       text-transform: uppercase;
+      color: desaturate(darken(@wmhc-blue-sky, 30%), 90%);
     }
   }
 }
