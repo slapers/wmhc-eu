@@ -333,7 +333,7 @@ gulp.task('watch-all', function () {
   gulp.watch(ngxFiles.sourceJavaScriptFiles, ['process-js']);
 
   // Watch LESS files
-  gulp.watch(ngxFiles.sourceLessFiles, ['process-less']);
+  gulp.watch(path.join(sourceDirectory, '/**/_build/**/*.less'), ['process-less']);
 });
 
 /**
