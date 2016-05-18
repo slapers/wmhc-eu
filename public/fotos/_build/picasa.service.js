@@ -55,10 +55,15 @@
             entry.photos = album.gphoto$numphotos.$t;
           }
 
-          if (album.media$group.media$content &&
-                album.media$group.media$content.length &&
-                album.media$group.media$content.length > 0) {
-            entry.thumbnail = album.media$group.media$content[0].url;
+          if (album.media$group.media$thumbnail &&
+                album.media$group.media$thumbnail.length &&
+                album.media$group.media$thumbnail.length > 0) {
+
+            entry.thumbnail = {
+              url: album.media$group.media$thumbnail[0].url,
+              width: album.media$group.media$thumbnail[0].width,
+              height: album.media$group.media$thumbnail[0].height
+            };
           }
 
           albums.push(entry);

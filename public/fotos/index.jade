@@ -4,12 +4,12 @@ block main
 
     section.photo-albums(ng-controller="PhotoController")
 
-        .container
+        .container-fluid
 
-            .col-md-6.album.ng-cloak(ng-repeat="album in albums", ng-click="openAlbum(album)")
+            .col-sm-6.col-md-4.col-lg-3.album.ng-cloak(ng-repeat="album in albums", ng-click="openAlbum(album)")
                 figure
                     .overlay
-                    img.img-responsive(ng-src="{{album.thumbnail}}")
+                    img(ng-src="{{album.thumbnail.url}}")
                     .title {{album.title}}
                     .summary {{album.summary}}
                     .photos {{album.photos}}

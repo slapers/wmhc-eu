@@ -10,7 +10,6 @@
     // View functions
 
     $scope.openAlbum = function (album) {
-      $log.debug(album);
       $window.location.href = '/fotos/album/#?album=' + album.id;
 
     };
