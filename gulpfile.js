@@ -150,6 +150,12 @@ var ngxFiles = {
         path.join(bowerDirectory, '/angular-moment/angular-moment.min.js.map')
       ],
       dest: path.join(outputDirectory, '/vendor/angular-moment/')
+    },
+    {
+      src: [
+        path.join(bowerDirectory, '/ngGallery/src/js/ngGallery.js')
+      ],
+      dest: path.join(outputDirectory, '/vendor/ng-gallery/')
     }
   ],
 

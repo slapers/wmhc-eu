@@ -1,139 +1,142 @@
 @import "../../_build/_variables";
 
 section.photos {
-  position: fixed;
-  background-color: black;
-  top: 0px;
-
-  height: 100%;
-  width: 100%;
-
-  display: flex;
-  flex-flow: column nowrap;
-
-  .top {
-    display: flex;
-    height: 80px;
-    align-items: center;
-
-    .back {
-      width: 40px;
-      height: 40px;
-      cursor: pointer;
-      margin-left: 20px;
-
-      .icon {
-        position: relative;
-        top: 20px;
-        height: 4px;
-        width: 40px;
-        background-color: white;
-        border-radius: 2px;
-
-        &::after, &::before {
-          position: absolute;
-          top: 6px;
-          height: 4px;
-          width: 16px;
-          border-radius: 2px;
-          content: '';
-          background-color: white;
-          transform: rotate(45deg);
-          transition: all .5s;
-        }
-        &::before {
-          top: -6px;
-          transform: rotate(-45deg);
-        }
-      }
-    }
-    .title {
-      flex: 1 0 0;
-
-    }
-  }
-  .middle {
-    flex: 1 0 0;
-    display: flex;
-    align-items: center;
-
-    .icon {
-      position: relative;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      cursor: pointer;
-      background-color: rgba(255,255,255,.15);
-
-      &:hover {
-        background-color: rgba(255,255,255,.2);;
-      }
-
-      &::after, &::before {
-        top: 22px;
-        left:10px;
-        position: absolute;
-        height: 4px;
-        width: 15px;
-        border-radius: 2px;
-        background-color: white;
-        content: '';
-        transform: rotate(45deg);
-      }
-      &::before {
-        top: 14px;
-        transform: rotate(-45deg);
-      }
-    }
-
-    .prev {
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: center;
-      width: 10%;
-      padding-left: 20px;
-
-
-    }
-    .media{
-      flex: 1 0 0;
-      display: flex;
-      justify-content: center;
-
-      img.image {
-        width:80%; /* you can use % */
-        height: 90%;
-        object-fit: cover;
-      }
-
-    }
-    .next {
-      width: 10%;
-
-      .icon {
-        &::after {
-          left: 15px;
-          transform: rotate(-45deg);
-        }
-        &::before {
-          left: 15px;
-          transform: rotate(45deg);
-        }
-      }
-
-    }
-
-  }
-  .footer {
-    display: flex;
-    justify-content: flex-end;
-
-    .nav {
-      color: white;
-      font-size: @font-size-h4;
-      margin-right: 20px;
-    }
-  }
-
-
+  min-height: 600px;
 }
+
+//  position: fixed;
+//  background-color: black;
+//  top: 0px;
+//
+//  height: 100%;
+//  width: 100%;
+//
+//  display: flex;
+//  flex-flow: column nowrap;
+//
+//  .top {
+//    display: flex;
+//    height: 80px;
+//    align-items: center;
+//
+//    .back {
+//      width: 40px;
+//      height: 40px;
+//      cursor: pointer;
+//      margin-left: 20px;
+//
+//      .icon {
+//        position: relative;
+//        top: 20px;
+//        height: 4px;
+//        width: 40px;
+//        background-color: white;
+//        border-radius: 2px;
+//
+//        &::after, &::before {
+//          position: absolute;
+//          top: 6px;
+//          height: 4px;
+//          width: 16px;
+//          border-radius: 2px;
+//          content: '';
+//          background-color: white;
+//          transform: rotate(45deg);
+//          transition: all .5s;
+//        }
+//        &::before {
+//          top: -6px;
+//          transform: rotate(-45deg);
+//        }
+//      }
+//    }
+//    .title {
+//      flex: 1 0 0;
+//
+//    }
+//  }
+//  .middle {
+//    flex: 1 0 0;
+//    display: flex;
+//    align-items: center;
+//
+//    .icon {
+//      position: relative;
+//      width: 40px;
+//      height: 40px;
+//      border-radius: 50%;
+//      cursor: pointer;
+//      background-color: rgba(255,255,255,.15);
+//
+//      &:hover {
+//        background-color: rgba(255,255,255,.2);;
+//      }
+//
+//      &::after, &::before {
+//        top: 22px;
+//        left:10px;
+//        position: absolute;
+//        height: 4px;
+//        width: 15px;
+//        border-radius: 2px;
+//        background-color: white;
+//        content: '';
+//        transform: rotate(45deg);
+//      }
+//      &::before {
+//        top: 14px;
+//        transform: rotate(-45deg);
+//      }
+//    }
+//
+//    .prev {
+//      display: flex;
+//      flex-flow: column nowrap;
+//      justify-content: center;
+//      width: 10%;
+//      padding-left: 20px;
+//
+//
+//    }
+//    .media{
+//      flex: 1 0 0;
+//      display: flex;
+//      justify-content: center;
+//
+//      img.image {
+//        width:80%; /* you can use % */
+//        height: 90%;
+//        object-fit: cover;
+//      }
+//
+//    }
+//    .next {
+//      width: 10%;
+//
+//      .icon {
+//        &::after {
+//          left: 15px;
+//          transform: rotate(-45deg);
+//        }
+//        &::before {
+//          left: 15px;
+//          transform: rotate(45deg);
+//        }
+//      }
+//
+//    }
+//
+//  }
+//  .footer {
+//    display: flex;
+//    justify-content: flex-end;
+//
+//    .nav {
+//      color: white;
+//      font-size: @font-size-h4;
+//      margin-right: 20px;
+//    }
+//  }
+//
+//
+//}

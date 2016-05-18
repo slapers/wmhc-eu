@@ -16,7 +16,8 @@
     "angular": "~1.4.8",
     "angular-moment": "~0.10.3",
     "moment": "~2.10.6",
-    "angular-ui-router": "~0.2.15"
+    "angular-ui-router": "~0.2.15",
+    "ngGallery": "*"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.0"

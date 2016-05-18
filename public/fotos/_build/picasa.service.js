@@ -9,8 +9,10 @@
 
     // Docs: https://developers.google.com/picasa-web/docs/2.0/reference#Parameters
     // Valid sizes : 94, 110, 128, 200, 220, 288, 320, 400, 512, 576, 640, 720, 800, 912, 1024, 1152, 1280, 1440, 1600
-    var thumbsize = 400;
-    var imgsizemax = 1600;
+    var albumThumbsize = 400;
+    var albumImgsizemax = 1600;
+    var photoThumbsize = 220;
+    var photoImgsizemax = 1600;
 
     this._parsePicasaAlbumResponse = function(response) {
 
@@ -75,29 +77,47 @@
 
     this._parsePicasaAlbumContentResponse = function (response) {
 
+      var title = 'Fotos';
       var photos = [];
 
-      if (response.data && response.data.feed && response.data.feed.entry) {
+      console.log(response);
+      if (response.data && response.data.feed) {
 
-
-        for (var i=0; i < response.data.feed.entry.length; i++){
-
-          var photo = response.data.feed.entry[i];
-
-          var entry = {
-            url : null
-          };
-
-          if (photo.content && photo.content.src) {
-            entry.url = photo.content.src;
-          }
-
-          photos.push(entry);
+        if (response.data.title && response.data.title.$t){
+          title = response.data.title.$t;
         }
 
-      }
+        if (response.data.feed.entry) {
 
-      return photos;
+
+          for (var i = 0; i < response.data.feed.entry.length; i++) {
+
+            var photo = response.data.feed.entry[i];
+
+            var entry = {
+              img: null,
+              thumb: null
+            };
+
+            if (photo.content && photo.content.src) {
+              entry.img = photo.content.src;
+            }
+            if (photo.media$group.media$thumbnail &&
+              photo.media$group.media$thumbnail.length &&
+              photo.media$group.media$thumbnail.length > 0) {
+
+              entry.thumb = photo.media$group.media$thumbnail[0].url;
+            }
+
+            photos.push(entry);
+          }
+
+        }
+      }
+      return {
+        title: title,
+        photos: photos
+      };
 
     };
 
@@ -105,7 +125,7 @@
     this.getAlbums = function(user) {
 
       return $http
-          .get(url + user + '?alt=json&thumbsize=' + thumbsize + '&imgmax=' + imgsizemax)
+          .get(url + user + '?alt=json&thumbsize=' + albumThumbsize + '&imgmax=' + albumImgsizemax)
           .then(
             function(data){
               return self._parsePicasaAlbumResponse(data);
@@ -119,7 +139,8 @@
 
     this.getPhotos = function(user, albumId){
       return $http
-        .get(url + user + '/albumid/' + albumId + '?alt=json&thumbsize=' + thumbsize + '&imgmax=' + imgsizemax)
+        .get(url + user + '/albumid/' + albumId + '?alt=json&thumbsize=' + photoThumbsize +
+          '&imgmax=' + photoImgsizemax)
         .then(
           function(data){
             return self._parsePicasaAlbumContentResponse(data);

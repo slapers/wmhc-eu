@@ -1,5 +1,6 @@
 (function () {
   angular.module('app', [
-    'angularMoment'
+    'angularMoment',
+    'jkuri.gallery'
   ]);
 })();
