@@ -7,6 +7,11 @@
 
     var url = 'https://picasaweb.google.com/data/feed/api/user/';
 
+    // Docs: https://developers.google.com/picasa-web/docs/2.0/reference#Parameters
+    // Valid sizes : 94, 110, 128, 200, 220, 288, 320, 400, 512, 576, 640, 720, 800, 912, 1024, 1152, 1280, 1440, 1600
+    var thumbsize = 400;
+    var imgsizemax = 1600;
+
     this._parsePicasaAlbumResponse = function(response) {
 
       var albums = [];
@@ -95,7 +100,7 @@
     this.getAlbums = function(user) {
 
       return $http
-          .get(url + user + '?alt=json')
+          .get(url + user + '?alt=json&thumbsize=' + thumbsize + '&imgmax=' + imgsizemax)
           .then(
             function(data){
               return self._parsePicasaAlbumResponse(data);
@@ -109,7 +114,7 @@
 
     this.getPhotos = function(user, albumId){
       return $http
-        .get(url + user + '/albumid/' + albumId + '?alt=json')
+        .get(url + user + '/albumid/' + albumId + '?alt=json&thumbsize=' + thumbsize + '&imgmax=' + imgsizemax)
         .then(
           function(data){
             return self._parsePicasaAlbumContentResponse(data);
