@@ -4,14 +4,12 @@ block main
 
     .container
 
-        section.padding-top-xxl.photos(ng-controller="AlbumController")
+        section.padding-top-l.photos(ng-controller="AlbumController")
 
-            .row
-                h3 {{album.title}}
-
-            .top
+            .row.padding-bottom-m
                 .back(ng-click="openFotos()")
                     .icon
+                h3 {{album.title}}
 
 
             ng-gallery(images="album.photos")

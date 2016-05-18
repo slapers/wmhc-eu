@@ -2,6 +2,43 @@
 
 section.photos {
   min-height: 600px;
+
+  .back {
+    position: relative;
+    top: 22px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-right: 20px;
+    float: left;
+
+    .icon {
+      position: relative;
+      top: 20px;
+      height: 4px;
+      width: 40px;
+      background-color: black;
+      border-radius: 2px;
+
+      &::after, &::before {
+        position: absolute;
+        top: 6px;
+        height: 4px;
+        width: 16px;
+        border-radius: 2px;
+        content: '';
+        background-color: black;
+        transform: rotate(45deg);
+        transition: all .5s;
+      }
+      &::before {
+        top: -6px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
 }
 
 //  position: fixed;

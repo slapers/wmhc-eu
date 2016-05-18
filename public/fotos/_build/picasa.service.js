@@ -83,8 +83,8 @@
       console.log(response);
       if (response.data && response.data.feed) {
 
-        if (response.data.title && response.data.title.$t){
-          title = response.data.title.$t;
+        if (response.data.feed.title && response.data.feed.title.$t){
+          title = response.data.feed.title.$t;
         }
 
         if (response.data.feed.entry) {
