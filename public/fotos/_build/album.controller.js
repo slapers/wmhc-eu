@@ -20,7 +20,6 @@
     PicasaService.getPhotos('106879961269612845164', search.album)
       .then(function(data){
         $scope.album = data;
-        $log.debug(data);
       });
 
   }

@@ -80,7 +80,6 @@
       var title = 'Fotos';
       var photos = [];
 
-      console.log(response);
       if (response.data && response.data.feed) {
 
         if (response.data.feed.title && response.data.feed.title.$t){
