@@ -16,15 +16,16 @@ section.photos {
     .icon {
       position: relative;
       top: 20px;
-      height: 4px;
+      height: 2px;
       width: 40px;
       background-color: black;
       border-radius: 2px;
 
       &::after, &::before {
         position: absolute;
-        top: 6px;
-        height: 4px;
+        left: -3px;
+        top: 5px;
+        height: 2px;
         width: 16px;
         border-radius: 2px;
         content: '';
@@ -33,8 +34,71 @@ section.photos {
         transition: all .5s;
       }
       &::before {
-        top: -6px;
+        top: -5px;
         transform: rotate(-45deg);
+      }
+    }
+  }
+
+  ng-gallery {
+    .nav-left, .nav-right {
+      z-index: 9999999;
+      display: block;
+      width: 50px;
+      height: 50px;
+      i {
+        display: none;
+      }
+      &::after, &::before {
+        top: 30px;
+        position: absolute;
+        height: 2px;
+        width: 25px;
+        background-color: white;
+        content: '';
+        transform: rotate(45deg);
+      }
+      &::before {
+        top: 14px;
+        transform: rotate(-45deg);
+      }
+    }
+    .nav-right {
+      right: 55px;
+      &::after {
+        transform: rotate(-45deg);
+      }
+      &::before {
+        transform: rotate(45deg);
+      }
+    }
+    .close-popup{
+      display: block;
+      width: 50px;
+      height: 50px;
+
+      &::after, &::before {
+        right: 20px;
+        top: 22px;
+        position: absolute;
+        height: 2px;
+        width: 35px;
+        border-radius: 1px;
+        background-color: white;
+        content: '';
+        transform: rotate(45deg);
+        transition: .3s ease;
+      }
+      &::before {
+        transform: rotate(-45deg);
+      }
+      &:hover {
+        &::after {
+          transform: rotate(35deg);
+        }
+        &::before {
+          transform: rotate(-35deg);
+        }
       }
     }
   }

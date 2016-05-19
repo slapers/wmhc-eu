@@ -9,7 +9,7 @@ block main
             .col-sm-12.col-md-6.col-lg-6.album.ng-cloak(ng-repeat="album in albums", ng-click="openAlbum(album)")
                 figure
                     .overlay
-                    img(ng-src="{{album.thumbnail.url}}")
+                    img.ng-cloak(ng-cloak ng-src="{{album.thumbnail.url}}")
                     .title {{album.title}}
                     .summary {{album.summary}}
                     .photos {{album.photos}}
