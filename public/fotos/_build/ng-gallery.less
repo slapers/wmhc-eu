@@ -4,41 +4,23 @@
   width: 100%;
   height: 100%;
   display: inline-block;
+  margin: auto;
 }
 
 img.ng-thumb {
   float: left;
   display: block;
   cursor: pointer;
-  margin: 2px 2px 0 0;
+  margin: 6px 6px 0 0;
+  height: 150px;
 }
-
 @media (max-width: @screen-xs-max) {
   img.ng-thumb {
-    height: 220px;
     float: none;
     margin-left: auto;
     margin-right: auto;
   }
 }
-@media (min-width: @screen-sm-min) {
-  img.ng-thumb {
-    height: 134px;
-  }
-}
-@media (min-width: @screen-md-min) {
-  img.ng-thumb {
-    height: 175px;
-    float: left;
-  }
-}
-@media (min-width: @screen-lg-min) {
-  img.ng-thumb {
-    height: 210px;
-    float: left;
-  }
-}
-
 
 .ng-overlay {
   position: fixed;
