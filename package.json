@@ -4,7 +4,8 @@
   "description": "WMHC website",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "run": "harp server",
+    "compile": "harp compile"
   },
   "author": "Stefan Lapers",
   "license": "MIT",
