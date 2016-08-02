@@ -1,6 +1,21 @@
 (function () {
 
 
+  function isFilteredAlbumType(album) {
+
+    var unwanted = ['ProfilePhotos', 'ScrapBook'];
+
+    if (!album.gphoto$albumType) {
+      return false;
+    }
+
+    for (var i = 0; i < unwanted.length; i++) {
+      if (unwanted[i] === album.gphoto$albumType.$t) {
+        return true;
+      }
+    }
+  }
+
   function PicasaService($http, $q, $log) {
 
     var self = this;
@@ -24,7 +39,7 @@
 
           var album = response.data.feed.entry[i];
 
-          if (album.gphoto$albumType && album.gphoto$albumType.$t === 'ProfilePhotos') {
+          if (isFilteredAlbumType(album)) {
             continue;
           }
 
