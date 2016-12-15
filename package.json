@@ -50,6 +50,6 @@
     "sinon-chai": "^2.7.0"
   },
   "dependencies": {
-    "harp": "^0.20.1"
+    "harp": "0.23.0"
   }
 }
