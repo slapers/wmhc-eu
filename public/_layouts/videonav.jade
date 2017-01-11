@@ -1,0 +1,14 @@
+block variables
+    - var menuActiveItem = current.path[0] || '';
+
+doctype html
+html.videonav(lang="en", ng-app="app")
+    include ../components/head/head
+
+    body
+        include ../components/header/header
+        main.wmhc-main
+            block main
+        include ../components/footer/footer
+
+    include ../components/ga/ga.html

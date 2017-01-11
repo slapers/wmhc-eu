@@ -1,14 +1,15 @@
-extends ../_layouts/default
+extends ../_layouts/videonav
 
 block main
 
-    .wmhc-hero-homepage
+    .wmhc-hero-video
+        .video-overlay
+        .video-content
+            video(autoplay="" loop="" preload="auto")
+                source(src="assets/test-loop.mp4" type="video/mp4")
+                source(type="video/webm")
+                source(type="video/ogg")
         .container
-
-    .wmhc-landing-homepage
-        .grass
-        .container
-            .landing
             .content
                 .row
                     .col-md-12
@@ -32,6 +33,38 @@ block main
                         .entry
                             span.day zon en feestdagen
                             span.time 13:00-19:00
+
+    //.wmhc-hero-homepage
+        .container
+
+    //
+        .wmhc-landing-homepage
+            .grass
+            .container
+                .landing
+                .content
+                    .row
+                        .col-md-12
+                            h2 Voetbalplein VK trappen steels
+                    .row
+                        .col-md-12
+                            h2.smaller Recht tegenover Bergstraat 90, Belsele
+
+                    .row.entries
+                        .col-md-12
+                            .entry
+                                span.day woensdag
+                                span.time 13:00-18:00
+                    .row
+                        .col-md-12
+                            .entry
+                                span.day zaterdag
+                                span.time 13:00-18:00
+                    .row
+                        .col-md-12
+                            .entry
+                                span.day zon en feestdagen
+                                span.time 13:00-19:00
 
     .container
         .row.padding-top-xxl

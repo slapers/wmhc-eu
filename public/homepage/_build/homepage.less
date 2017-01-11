@@ -1,5 +1,64 @@
 @import "../../_build/_variables";
 
+
+.wmhc-hero-video {
+  height: 100vh;
+  background-color: @wmhc-blue-sky;
+
+  video {
+    //height: auto;
+    left: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100vh;
+  }
+
+  .video-overlay {
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+  }
+
+  h2, p {
+    color: white;
+    font-size: floor(@font-size-base * 1.8);
+    margin-bottom: 0rem;
+    &.smaller {
+      font-size: floor(@font-size-base * 1.2);
+      .wmhc-font-normal();
+    }
+  }
+  .content {
+    position: relative;
+    z-index: 3;
+    margin-top: 50vh;
+  }
+
+  .entries {
+    padding-top: 12rem;
+  }
+
+  .entry {
+    color: white;
+    font-size: floor(@font-size-base*1.3);
+    margin-bottom: 1rem;
+    .time {
+      padding-left: 20px;
+    }
+  }
+
+
+}
+
+
 .wmhc-hero-homepage {
 
   background-color: @wmhc-blue-sky;

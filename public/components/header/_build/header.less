@@ -28,3 +28,30 @@
   }
 
 }
+
+html.videonav {
+
+  .navbar-default {
+    padding-top: 3rem;
+    background: transparent;
+    border-color: transparent;
+  }
+  .wmhc-main {
+    padding-top: 0;
+  }
+  .wmhc-navbar-top {
+    box-shadow: none;
+
+    a {
+      color: white;
+      font-size: floor(@font-size-base * .9);
+      text-transform: uppercase;
+      .wmhc-font-semibold;
+    }
+    .active > a {
+      color: white;
+      border-bottom: 1px solid white;
+    }
+
+  }
+}
